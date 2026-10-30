@@ -1,0 +1,20 @@
+[project]
+name = "code-complexity-cli"
+version = "0.1.0"
+description = "Measure cyclomatic and cognitive code complexity, function size, and identify refactoring hotspots."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "toolkit_common",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+ccx = "code_complexity.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
