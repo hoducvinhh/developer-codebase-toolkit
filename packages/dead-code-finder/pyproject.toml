@@ -1,0 +1,19 @@
+[project]
+name = "dead-code-finder"
+version = "0.1.0"
+description = "Detect potentially unused imports, variables, functions, and dead code."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "toolkit_common",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+dcf = "dead_code_finder.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
