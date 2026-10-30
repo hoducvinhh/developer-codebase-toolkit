@@ -1,0 +1,55 @@
+[project]
+name = "developer-code-toolkit"
+version = "0.1.0"
+description = "Monorepo for developer code quality, analysis, complexity, and audit CLI tools."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Developer Code Toolkit Maintainers" }
+]
+dependencies = [
+    "click>=8.1.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.4.0",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = [
+    "shared/toolkit_common/tests",
+    "packages/codebase-map/tests",
+    "packages/env-checker/tests",
+    "packages/api-diff/tests",
+    "packages/dead-code-finder/tests",
+    "packages/code-complexity-cli/tests",
+    "packages/dependency-audit/tests",
+]
+pythonpath = [
+    "shared/toolkit_common/src",
+    "packages/codebase-map/src",
+    "packages/env-checker/src",
+    "packages/api-diff/src",
+    "packages/dead-code-finder/src",
+    "packages/code-complexity-cli/src",
+    "packages/dependency-audit/src",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501"]
