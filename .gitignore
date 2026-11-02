@@ -56,22 +56,64 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# Environments
+# Environments & Secrets
 .env
+.env.*
+!.env.example
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+*.pem
+*.key
+*.cert
+*.pfx
+secrets/
 
-# IDE / Editor
+# IDE / Editor & AI tools
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+*.sublime-*
+*.code-workspace
+.cursor/
+.history/
 
 # Operating System files
 .DS_Store
 Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Linter & Tool Caches
+.ruff_cache/
+.mypy_cache/
+.osv_cache.json
+*.log
+
+# Internal planning, specifications & personal notes (not for end users)
+PLAN.md
+plan.md
+PROJECT_SPEC.md
+project_spec.md
+TODO.md
+todo.md
+NOTES.md
+notes.md
+*.draft.md
+*.plan.md
+scratch/
+temp/
+tmp/
+local/
+*.local
+
+# Local generated analysis reports & diagrams
+*.sarif
+*-report.md
+*-report.json
+*.mmd
