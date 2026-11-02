@@ -433,3 +433,4 @@ ruff check .
 ## 📄 License
 
 Distributed under the [MIT License](LICENSE).
+
